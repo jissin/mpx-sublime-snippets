@@ -1,0 +1,33 @@
+<snippet>
+	<content><![CDATA[
+<script name="json">
+	const wxComponents = {}
+
+	module.exports = {
+		${2:component: true,}
+		navigationBarTitleText: '$3',
+		usingComponents:
+			__mpx_mode__ === 'wx' ? Object.assign({}, wxComponents) : {},
+	}
+</script>
+
+<script>
+	import { create${1:Component} } from '@mpxjs/core'
+
+	create${1:Component}({
+		data: {},
+	})
+</script>
+
+<template>
+	$0
+</template>
+
+<style scoped>
+</style>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mpx</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>text.html.vue</scope>
+</snippet>
